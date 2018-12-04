@@ -1,16 +1,16 @@
 # Laravel Nova Field - Array Images
-A laravel nova field that will let you save your uploaded images path to your database in array format.
+A laravel nova field that will let you save your uploaded images path to your database in array format, change
+to make paths in json data relative.
 
 # Installation
 ```
-composer require halimtuhu/array-images
 ```
 
 # Usage
-Create array images just call `Halimtuhu\ArrayImages\ArrayImages` class and use `make` static method to create a field.
+Create array images just call `TriadLtd\ArrayImages\ArrayImages` class and use `make` static method to create a field.
 ```
 ...
-use Halimtuhu\ArrayImages\ArrayImages;
+use TriadLtd\ArrayImages\ArrayImages;
 ...
 public function fields(Request $request)
     {
@@ -25,13 +25,13 @@ public function fields(Request $request)
 That will create a field with name `Images`. Stored data will look like this.
 ```
 [{
-    "url": "http://laranov.halimtuhu.test/storage/wB04AbprHGxHw4I3sizXmuw9L4LBcG0wv0QEacAo.jpeg",
+    "url": "/storage/wB04AbprHGxHw4I3sizXmuw9L4LBcG0wv0QEacAo.jpeg",
     "name": "wB04AbprHGxHw4I3sizXmuw9L4LBcG0wv0QEacAo.jpeg"
 }, {
-    "url": "http://laranov.halimtuhu.test/storage/eOuxUCjHGNokkHdOXYB7gGObxCvf7m30ridFpBpy.jpeg",
+    "url": "/storage/eOuxUCjHGNokkHdOXYB7gGObxCvf7m30ridFpBpy.jpeg",
     "name": "eOuxUCjHGNokkHdOXYB7gGObxCvf7m30ridFpBpy.jpeg"
 }, {
-    "url": "http://laranov.halimtuhu.test/storage/nLkZp4vfpATEp56NStJfeAtKoHvmN2hapfxoNrEN.jpeg",
+    "url": "/storage/nLkZp4vfpATEp56NStJfeAtKoHvmN2hapfxoNrEN.jpeg",
     "name": "nLkZp4vfpATEp56NStJfeAtKoHvmN2hapfxoNrEN.jpeg"
 }]
 ```
