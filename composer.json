@@ -1,5 +1,5 @@
 {
-    "name": "halimtuhu/array-images",
+    "name": "triad-ltd/array-images",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Halimtuhu\\ArrayImages\\": "src/"
+            "TriadLtd\\ArrayImages\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Halimtuhu\\ArrayImages\\FieldServiceProvider"
+                "TriadLtd\\ArrayImages\\FieldServiceProvider"
             ]
         }
     },

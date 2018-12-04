@@ -1,5 +1,5 @@
 <?php
-namespace Halimtuhu\ArrayImages\Http\Controllers;
+namespace TriadLtd\ArrayImages\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
@@ -9,16 +9,19 @@ class ArrayImagesController extends Controller
 {
     public function index(Request $request)
     {
-        return "array images by halimtuhu";
+        return "array images by triadltd (forked from halimtuhu)";
     }
 
     public function upload(Request $request)
     {
         $image = Storage::putFile('/', $request->file('image'));
 
+        $url = env('APP_URL');
+        $file = str_replace($url, '', Storage::url($image));
+
         $data = [
             'name' => $image,
-            'url' => Storage::url($image),
+            'url' => $file,
         ];
 
         return $data;

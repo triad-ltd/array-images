@@ -1,6 +1,6 @@
 <?php
 
-namespace Halimtuhu\ArrayImages;
+namespace TriadLtd\ArrayImages;
 
 use Laravel\Nova\Fields\Field;
 
